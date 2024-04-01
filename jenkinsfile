@@ -1,0 +1,18 @@
+pipeline {
+    agent any
+    stages {
+        stage('check out') {
+            steps { 
+                sh 'git clone https://github.com/Lakshmi8096/Lakshmi.git'
+            }
+        }
+        stage('build image') {
+            steps { 
+                sh '''
+                sudo docker build -t petclinic .
+                sudo docker run -d -p 80:8080 petclinic
+                '''
+            }
+        }
+    }
+}

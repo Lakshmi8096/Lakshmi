@@ -1,0 +1,1 @@
+building java based application with docker image on jenkins pipeline
