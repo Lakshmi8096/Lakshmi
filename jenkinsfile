@@ -1,11 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage('check out') {
-            steps { 
-                sh 'git clone https://github.com/Lakshmi8096/Lakshmi.git'
-            }
-        }
         stage('build image') {
             steps { 
                 sh '''
